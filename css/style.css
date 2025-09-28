@@ -47,8 +47,6 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    background-size: 200% 200%;
-    animation: gradientShift 4s ease-in-out infinite;
 }
 
 .nav-logo h2:hover {
@@ -188,7 +186,6 @@ main {
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    animation: fadeInUp 1s ease-out;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 1.2;
@@ -197,7 +194,6 @@ main {
 .hero-content p {
     font-size: 1.3rem;
     margin-bottom: 30px;
-    animation: fadeInUp 1s ease-out 0.3s both;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 400;
     line-height: 1.6;
@@ -206,7 +202,6 @@ main {
 .hero-buttons {
     display: flex;
     gap: 20px;
-    animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 .hero-btn {
@@ -287,7 +282,6 @@ main {
     border-radius: 20px;
     padding: 40px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 .search-container h3 {
@@ -416,7 +410,6 @@ main {
 
 .about-header {
     margin-bottom: 40px;
-    animation: fadeInUp 0.8s ease-out;
 }
 
 .about-badge {
@@ -430,7 +423,6 @@ main {
     margin-bottom: 20px;
     box-shadow: 0 4px 15px rgba(248, 187, 217, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .about-content h2 {
@@ -440,7 +432,6 @@ main {
     color: #5d4037;
     line-height: 1.2;
     font-weight: 700;
-    animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 .about-content h2::after {
@@ -453,7 +444,6 @@ main {
     font-weight: 500;
     margin-bottom: 0;
     font-style: italic;
-    animation: fadeInUp 0.8s ease-out 0.6s both;
 }
 
 .about-description {
@@ -464,7 +454,6 @@ main {
     text-align: left;
     position: relative;
     padding-left: 30px;
-    animation: fadeInUp 0.8s ease-out 0.8s both;
 }
 
 .about-description::before {
@@ -493,19 +482,6 @@ main {
     border-radius: 15px;
     border: 1px solid rgba(248, 187, 217, 0.2);
     transition: all 0.3s ease;
-    animation: fadeInUp 0.8s ease-out both;
-}
-
-.feature-item:nth-child(1) {
-    animation-delay: 1s;
-}
-
-.feature-item:nth-child(2) {
-    animation-delay: 1.2s;
-}
-
-.feature-item:nth-child(3) {
-    animation-delay: 1.4s;
 }
 
 .feature-item:hover {
@@ -621,6 +597,82 @@ main {
     opacity: 1;
 }
 
+/* Social Media Styles */
+.social-media {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-media h4 {
+    color: #5d4037;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    min-width: 80px;
+}
+
+.social-link.facebook {
+    background: linear-gradient(135deg, #3b5998 0%, #4c70ba 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(59, 89, 152, 0.3);
+}
+
+.social-link.instagram {
+    background: linear-gradient(135deg, #e4405f 0%, #fd1d1d 50%, #fcb045 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(228, 64, 95, 0.3);
+}
+
+.social-link.twitter {
+    background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(29, 161, 242, 0.3);
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+    background: transparent;
+}
+
+.social-link span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Social media icons styling */
+.social-link.facebook .social-icon {
+    filter: none;
+}
+
+.social-link.instagram .social-icon {
+    filter: none;
+}
+
+.social-link.twitter .social-icon {
+    filter: none;
+}
+
 .section p {
     font-size: 1.1rem;
     color: #666;
@@ -629,29 +681,294 @@ main {
     line-height: 1.8;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+/* Wisata Section Styles */
+.wisata-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.wisata-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.wisata-side {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    height: 100%;
+}
+
+.wisata-side .wisata-content {
+    padding: 1rem;
+}
+
+.wisata-side .wisata-footer {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.wisata-side .wisata-header {
+    margin-bottom: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.wisata-side .wisata-buttons {
+    gap: 0.5rem;
+}
+
+.wisata-side .wisata-btn {
+    padding: 8px;
+    font-size: 0.85rem;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+}
+
+.wisata-side .wisata-btn span {
+    display: none;
+}
+
+.wisata-side .wisata-content h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.wisata-side .wisata-location {
+    font-size: 0.8rem;
+}
+
+.wisata-side .location-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.wisata-side .btn-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.wisata-main .wisata-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wisata-main .wisata-image {
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.wisata-main .wisata-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.wisata-main .wisata-description {
+    flex: 1;
+}
+
+.wisata-side .wisata-image {
+    height: 180px;
+}
+
+.wisata-side .wisata-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wisata-side .wisata-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.wisata-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.wisata-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.wisata-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wisata-price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.wisata-content {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.wisata-footer {
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    border-top: 1px solid #f0f0f0;
+    background: #fafafa;
+}
+
+.wisata-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.wisata-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #8B4513;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.location-icon {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(50%) saturate(2000%) hue-rotate(25deg) brightness(0.7);
+}
+
+.wisata-content h3 {
+    font-size: 1.3rem;
+    color: #8B4513;
+    font-weight: 700;
+    margin: 0;
+}
+
+.wisata-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.wisata-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.wisata-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.booking-btn {
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    color: white;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.view-btn {
+    background: linear-gradient(135deg, #FFB6C1, #FFC0CB);
+    color: #8B4513;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+}
+
+.btn-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.booking-btn .btn-icon {
+    filter: brightness(0) invert(1);
+}
+
+.view-btn .btn-icon {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(50%) saturate(2000%) hue-rotate(25deg) brightness(0.7);
+}
+
+/* Responsive Design for Wisata */
+@media screen and (max-width: 1024px) {
+    .wisata-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .wisata-side {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1.5rem;
+        height: auto;
     }
 }
 
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
+@media screen and (max-width: 768px) {
+    .wisata-side {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 1.5rem;
+        height: auto;
     }
-    50% {
-        background-position: 100% 50%;
+    
+    .wisata-card {
+        margin: 0 1rem;
     }
-    100% {
-        background-position: 0% 50%;
+    
+    .wisata-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .wisata-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .wisata-btn {
+        justify-content: center;
+        padding: 12px 20px;
+        width: 100%;
+    }
+    
+    .wisata-side .wisata-btn {
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
     }
 }
+
+/* Animations - Removed */
 
 /* Smooth Scrolling */
 html {
@@ -764,6 +1081,24 @@ html {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+    
+    .social-links {
+        gap: 15px;
+    }
+    
+    .social-link {
+        padding: 12px 16px;
+        min-width: 70px;
+    }
+    
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .social-link span {
+        font-size: 0.8rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -828,6 +1163,29 @@ html {
         top: 10px;
         right: 10px;
         min-width: 70px;
+    }
+    
+    .social-links {
+        gap: 10px;
+    }
+    
+    .social-link {
+        padding: 10px 12px;
+        min-width: 60px;
+    }
+    
+    .social-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .social-link span {
+        font-size: 0.7rem;
+    }
+    
+    .social-media h4 {
+        font-size: 1rem;
+        margin-bottom: 15px;
     }
     
     .feature-item {
